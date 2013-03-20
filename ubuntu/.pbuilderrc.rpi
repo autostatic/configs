@@ -1,0 +1,16 @@
+APTCONFDIR=/home/jeremy/rpi/etc/apt
+BUILDUSERID=1000
+APTKEYRINGS=/home/jeremy/rpi/etc/apt/trusted.gpg
+MIRRORSITE=http://archive.raspbian.org/raspbian/
+OTHERMIRROR="deb http://rpi.autostatic.com/raspbian wheezy main"
+USEDEVPTS=yes
+USEPROC=yes
+
+export QEMU_CPU=arm1176
+export DEB_CFLAGS_MAINT_APPEND="-march=armv6 -mfpu=vfp -mfloat-abi=hard"
+export DEB_CXXFLAGS_MAINT_APPEND="-march=armv6 -mfpu=vfp -mfloat-abi=hard"
+export DEB_BUILD_OPTS="parallel=2"
+
+#CONCURRENCY_LEVEL=2
+#ALLOWUNTRUSTED=yes
+#OTHERMIRROR="deb http://ppa.launchpad.net/autostatic/doubango/ubuntu precise main"
