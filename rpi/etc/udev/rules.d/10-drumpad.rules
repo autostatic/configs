@@ -1,0 +1,2 @@
+ATTRS{idVendor}=="0218", ATTRS{idProduct}=="0001", ACTION=="change", RUN+="/bin/su -l pi -c /home/pi/bin/drumpad"
+ATTRS{idVendor}=="0218", ATTRS{idProduct}=="0001", ACTION=="remove", RUN+="/bin/su -l pi -c /home/pi/bin/drumpad-stop"
