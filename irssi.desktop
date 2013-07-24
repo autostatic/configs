@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=irssi
+GenericName=irssi
+Comment=terminal based IRC client
+Exec=/home/jeremy/bin/start-irssi
+Icon=irssi256x256.png
+#Terminal=true
+Type=Application
+Categories=Network;InstantMessaging;ConsoleOnly;
