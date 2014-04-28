@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alsa>
+  <client name="System">
+    <port id="0" />
+    <port id="1" />
+  </client>
+  <client name="Midi Through">
+    <port id="0" />
+  </client>
+  <client name="MIDI DRUM">
+    <port id="0" />
+  </client>
+  <client name="jack_midi" />
+</alsa>
+<jack>
+  <client name="system">
+    <port name="capture_1" />
+  </client>
+  <client name="alsa_pcm">
+    <port name="Midi-Through/midi_capture_1" />
+    <port name="MIDI-DRUM/midi_capture_1">
+      <connection port="drumkv1:in" />
+    </port>
+  </client>
+  <client name="drumkv1">
+    <port name="Out_L">
+      <connection port="system:playback_1" />
+    </port>
+    <port name="Out_R">
+      <connection port="system:playback_2" />
+    </port>
+  </client>
+</jack>
